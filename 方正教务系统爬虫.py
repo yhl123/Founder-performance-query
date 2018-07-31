@@ -8,7 +8,7 @@ studentnumber = input('学 号 :')
 password = input('密 码 :')
 
 s = requests.session()
-url = "http://219.149.172.4:81/"
+url = ""#教务IP地址
 response = s.get(url)
 selector = etree.HTML(response.content)
 __VIEWSTATE = selector.xpath('//*[@id="form1"]/input/@value')[0]
